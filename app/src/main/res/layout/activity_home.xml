@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#2C2E45"
+        android:clipToOutline="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:paddingStart="20dp"
+            android:paddingTop="40dp"
+            android:text="Quizzy"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/avatarTextView"
+            android:layout_width="57dp"
+            android:layout_height="49dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/avatar_circle"
+            android:gravity="center"
+            android:text="U"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Open Profile" />
+
+    </RelativeLayout>
+
+    <!-- LIST FLASHCARD SET -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studySetList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/addButton"
+        android:layout_below="@id/topBar"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="12dp"
+        android:padding="12dp"
+        tools:listitem="@layout/item_study_set"/>
+
+    <!-- ADD BUTTON -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="24dp"
+        android:backgroundTint="#4F46E5"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white" />
+
+</RelativeLayout>
