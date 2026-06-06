@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#181717"
+    android:elevation="6dp"
+    app:cardCornerRadius="16dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:radius="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/setTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Study Set Title"
+            android:textColor="#0B0A0A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Term count -->
+        <TextView
+            android:id="@+id/setTermCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setTitle"
+            android:text="5 terms"
+            android:textColor="#0F0E0E"
+            android:textSize="14sp" />
+
+        <!-- Username & Avatar -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setTermCount"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/avatarTexView"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/avatar_circle"
+                android:gravity="center"
+                android:text="G"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:text="gavin.robey"
+                android:textColor="#1D1B1B"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Edit Icon -->
+        <ImageView
+            android:id="@+id/editIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#1A1818" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
